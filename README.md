@@ -1,13 +1,16 @@
 # Projet Test | Ex 1
 
+Compile this project
 ```bash
-javac src/main/java/com/jeido/projettest/*.java
+javac *.java
 ```
 
+Run this Project
 ```bash
-java src/main/java/com/jeido/projettest/main.class
+java Main
 ```
 
+Create an archive
 ```bash
-
+jar cfv projet1.jar
 ```
