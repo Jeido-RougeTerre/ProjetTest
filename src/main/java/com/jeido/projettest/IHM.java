@@ -43,6 +43,6 @@ public class IHM {
     }
 
     private void listContacts() {
-        System.out.println(String.join("\n", this.annuaire.listAll().stream.map(Personne::toString).toList()));
+        System.out.println(String.join("\n", this.annuaire.listAll().stream().map(Personne::toString).toList()));
     }
 }
