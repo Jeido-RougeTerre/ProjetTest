@@ -12,5 +12,5 @@ java Main
 
 Create an archive
 ```bash
-jar cfv projet1.jar
+jar cfv projet1.jar .
 ```
