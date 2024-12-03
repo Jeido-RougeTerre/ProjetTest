@@ -12,5 +12,5 @@ java -cp bin Main
 
 Create an archive
 ```bash
-jar cfv projet1.jar -C bin .
+jar cmfv MANIFEST.MF projet1.jar -C bin .
 ```
