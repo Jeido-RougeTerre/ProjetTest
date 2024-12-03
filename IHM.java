@@ -16,8 +16,7 @@ public class IHM {
             2. Lister les contacts
             3. Rechercher un contact par nom
             4. Quitter
-            >
-            """);
+            >\s""");
 
             String choix = sc.nextLine();
 
@@ -58,7 +57,7 @@ public class IHM {
             System.out.println("Aucun contacts trouvé !");
             return;
         }
-        
+
         System.out.println(String.join("\n", pers.stream().map(Personne::toString).toList()));
     }
 }
