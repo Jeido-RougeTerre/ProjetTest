@@ -14,7 +14,8 @@ public class IHM {
             System.out.print("""
             1. Ajouter un contact
             2. Lister les contacts
-            3. Quitter
+            3. Rechercher un contact par nom
+            4. Quitter
             >
             """);
 
@@ -23,7 +24,8 @@ public class IHM {
             switch (choix) {
                 case "1" -> addContact();
                 case "2" -> listContacts();
-                case "3" -> { flagQuit = true; }
+                case "3" -> findContact();
+                case "4" -> { flagQuit = true; }
                 default -> System.out.println("Choix invalide !");
             }
 
@@ -44,5 +46,19 @@ public class IHM {
 
     private void listContacts() {
         System.out.println(String.join("\n", this.annuaire.listAll().stream().map(Personne::toString).toList()));
+    }
+
+    private void findContact() {
+        System.out.print("nom: ");
+        Scanner sc = new Scanner(System.in);
+        String nom = sc.nextLine();
+
+        List<Personne> pers = annuaire.findByName(nom);
+        if (pers.isEmpty()) {
+            System.out.println("Aucun contacts trouvé !");
+            return;
+        }
+        
+        System.out.println(String.join("\n", pers.stream().map(Personne::toString).toList()));
     }
 }

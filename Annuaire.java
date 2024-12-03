@@ -20,4 +20,12 @@ public class Annuaire {
 
         return true;
     }
+
+    public List<Personne> findByName(String nom) {
+        List<Personne> pers = new ArrayList<Personne>();
+        for(Personne p : personnes) {
+            if (p.getNom().toLowerCase().contains(nom.toLowerCase())) pers.add(p);
+        }
+        return pers;
+    }
 }
