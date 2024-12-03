@@ -14,3 +14,8 @@ Create an archive
 ```bash
 jar cmfv MANIFEST.MF projet1.jar -C bin .
 ```
+
+Execute the jar
+```bash
+java -jar projet1.jar
+```
